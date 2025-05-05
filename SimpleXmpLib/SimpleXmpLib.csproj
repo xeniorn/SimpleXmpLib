@@ -1,0 +1,111 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <Platforms>x64;x86</Platforms>
+	<VersionPrefix>0.0.0</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Platform)' == 'x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <!--XmpToolkit-->
+  <ItemGroup Condition=" '$(Platform)' == 'x64' ">
+    <Reference Include="..\extern_dependencies\x64\CsXmpToolkitNetStandard.dll" />
+	  <None Include="..\extern_dependencies\x64\CsXmpToolkitNetStandard.dll">
+      <Pack>true</Pack>
+	    <PackagePath>lib/$(TargetFramework)</PackagePath>
+    </None>
+    <None Include="..\extern_dependencies\x64\XmpToolkit.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <Pack>true</Pack>
+	    <PackagePath>runtimes/win-x64/native</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Platform)' == 'x86' ">
+    <Reference Include="..\extern_dependencies\x86\CsXmpToolkitNetStandard.dll" />
+	  <None Include="..\extern_dependencies\x86\CsXmpToolkitNetStandard.dll">
+      <Pack>true</Pack>
+	    <PackagePath>lib/$(TargetFramework)</PackagePath>
+    </None>
+    <None Include="..\extern_dependencies\x86\XmpToolkit.dll">	
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <Pack>true</Pack>
+	    <PackagePath>runtimes/win-x86/native</PackagePath>
+    </None>
+  </ItemGroup>
+  <!--/XmpToolkit-->
+  
+  <PropertyGroup>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+
+  <!-- special stuff needed to pack the project dep dlls into the same nuget package 
+  (messy... but it's for stuff that aren't truly independent libs. Otherwise, a nuget pkg should be made for each)
+  This works _only_ for project references! The precompiled / external dlls I still need to add via <None> tags
+  See: https://stackoverflow.com/a/56990424/4554766-->
+  <PropertyGroup>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+  </PropertyGroup>
+
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'all'))" />
+    </ItemGroup>
+  </Target>
+  <!-- // special stuff-->
+
+  <ItemGroup>
+    <ProjectReference Include="..\CsXmpToolkitExtensions\CsXmpToolkitExtensions.csproj">
+      <PrivateAssets>all</PrivateAssets>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>CsXmpToolkitExtensions.dll</IncludeAssets>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="SimpleXmpLib.FileEmbedding"></InternalsVisibleTo>
+    <InternalsVisibleTo Include="SimpleXmpLib.Test"></InternalsVisibleTo>
+  </ItemGroup>
+  
+
+	<Choose>
+    <When Condition=" '$(VersionSuffix)'!='' ">
+      <PropertyGroup>
+        <PackageVersion>$(VersionPrefix)-$(VersionSuffix)</PackageVersion>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(VersionSuffix)'=='' ">
+      <PropertyGroup>
+        <PackageVersion>$(VersionPrefix)</PackageVersion>
+      </PropertyGroup>
+    </When>
+  </Choose>
+  
+   <PropertyGroup>
+    <PackageId>SimpleXmpLib</PackageId>
+    <Authors>Juraj Ahel</Authors>
+    <Description>SimpleXmpLib provides a convenient way to work with XMP metadata containers, and embedding such containers in supported files. Supports win-x64</Description>
+    <PackageProjectUrl>https://github.com/xeniorn/SimpleXmpLib</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/xeniorn/SimpleXmpLib</RepositoryUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>metadata;xmp</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="" />
+    <None Include="../LICENSE" Pack="true" PackagePath="" />
+    <None Include="../Resources/icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>

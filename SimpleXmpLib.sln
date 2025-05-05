@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35723.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleXmpLib", "SimpleXmpLib\SimpleXmpLib.csproj", "{A5871520-0F04-4FD9-9B65-1DA11184804A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test_files", "test_files", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		test_files\BlackSquare.jpg = test_files\BlackSquare.jpg
+		test_files\BlackSquare.png = test_files\BlackSquare.png
+		test_files\BlackSquare.psd = test_files\BlackSquare.psd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlueSquares", "BlueSquares", "{9BD81D06-2CD1-4021-9814-1CFCA9ECC2D7}"
+	ProjectSection(SolutionItems) = preProject
+		test_files\BlueSquares\BlueSquare.ai = test_files\BlueSquares\BlueSquare.ai
+		test_files\BlueSquares\BlueSquare.avi = test_files\BlueSquares\BlueSquare.avi
+		test_files\BlueSquares\BlueSquare.eps = test_files\BlueSquares\BlueSquare.eps
+		test_files\BlueSquares\BlueSquare.indd = test_files\BlueSquares\BlueSquare.indd
+		test_files\BlueSquares\BlueSquare.jpg = test_files\BlueSquares\BlueSquare.jpg
+		test_files\BlueSquares\BlueSquare.mov = test_files\BlueSquares\BlueSquare.mov
+		test_files\BlueSquares\BlueSquare.mp3 = test_files\BlueSquares\BlueSquare.mp3
+		test_files\BlueSquares\BlueSquare.pdf = test_files\BlueSquares\BlueSquare.pdf
+		test_files\BlueSquares\BlueSquare.png = test_files\BlueSquares\BlueSquare.png
+		test_files\BlueSquares\BlueSquare.psd = test_files\BlueSquares\BlueSquare.psd
+		test_files\BlueSquares\BlueSquare.tif = test_files\BlueSquares\BlueSquare.tif
+		test_files\BlueSquares\BlueSquare.wav = test_files\BlueSquares\BlueSquare.wav
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsXmpToolkitExtensions", "CsXmpToolkitExtensions\CsXmpToolkitExtensions.csproj", "{BC3EF8A4-262C-4DB2-880D-8CB9A309E928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleXmpLib.Test", "SimpleXmpLib.Test\SimpleXmpLib.Test.csproj", "{59A7A5CA-97A3-42E3-AAB0-D09F1DB0C4C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extern_dependencies", "extern_dependencies", "{229D5200-5D8F-4F4A-AE7D-AC50CCB0FE82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{C7EEF96A-F918-49FF-B2CC-0DADED2DF56A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{D8E4CE3D-FC0D-4B25-A68F-3A05F2E181C1}"
+	ProjectSection(SolutionItems) = preProject
+		extern_dependencies\x64\CsXmpToolkitNetStandard.deps.json = extern_dependencies\x64\CsXmpToolkitNetStandard.deps.json
+		extern_dependencies\x64\CsXmpToolkitNetStandard.dll = extern_dependencies\x64\CsXmpToolkitNetStandard.dll
+		extern_dependencies\x64\CsXmpToolkitNetStandard.pdb = extern_dependencies\x64\CsXmpToolkitNetStandard.pdb
+		extern_dependencies\x64\CsXmpToolkitNetStandard.xml = extern_dependencies\x64\CsXmpToolkitNetStandard.xml
+		extern_dependencies\x64\XmpToolkit.dll = extern_dependencies\x64\XmpToolkit.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleXmpLib.FileEmbedding", "SimpleXmpLib.FileEmbedding\SimpleXmpLib.FileEmbedding.csproj", "{CDBCB9D2-DF9E-4AFF-8439-B92FE9DB3D5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedTestData", "SharedTestData\SharedTestData.csproj", "{EEA8CC4D-2596-4EBA-864C-1D111A39D14F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5871520-0F04-4FD9-9B65-1DA11184804A}.Debug|x64.ActiveCfg = Debug|x64
+		{A5871520-0F04-4FD9-9B65-1DA11184804A}.Debug|x64.Build.0 = Debug|x64
+		{A5871520-0F04-4FD9-9B65-1DA11184804A}.Release|x64.ActiveCfg = Release|x64
+		{A5871520-0F04-4FD9-9B65-1DA11184804A}.Release|x64.Build.0 = Release|x64
+		{BC3EF8A4-262C-4DB2-880D-8CB9A309E928}.Debug|x64.ActiveCfg = Debug|x64
+		{BC3EF8A4-262C-4DB2-880D-8CB9A309E928}.Debug|x64.Build.0 = Debug|x64
+		{BC3EF8A4-262C-4DB2-880D-8CB9A309E928}.Release|x64.ActiveCfg = Release|x64
+		{BC3EF8A4-262C-4DB2-880D-8CB9A309E928}.Release|x64.Build.0 = Release|x64
+		{59A7A5CA-97A3-42E3-AAB0-D09F1DB0C4C9}.Debug|x64.ActiveCfg = Debug|x64
+		{59A7A5CA-97A3-42E3-AAB0-D09F1DB0C4C9}.Debug|x64.Build.0 = Debug|x64
+		{59A7A5CA-97A3-42E3-AAB0-D09F1DB0C4C9}.Release|x64.ActiveCfg = Release|x64
+		{59A7A5CA-97A3-42E3-AAB0-D09F1DB0C4C9}.Release|x64.Build.0 = Release|x64
+		{CDBCB9D2-DF9E-4AFF-8439-B92FE9DB3D5F}.Debug|x64.ActiveCfg = Debug|x64
+		{CDBCB9D2-DF9E-4AFF-8439-B92FE9DB3D5F}.Debug|x64.Build.0 = Debug|x64
+		{CDBCB9D2-DF9E-4AFF-8439-B92FE9DB3D5F}.Release|x64.ActiveCfg = Release|x64
+		{CDBCB9D2-DF9E-4AFF-8439-B92FE9DB3D5F}.Release|x64.Build.0 = Release|x64
+		{EEA8CC4D-2596-4EBA-864C-1D111A39D14F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EEA8CC4D-2596-4EBA-864C-1D111A39D14F}.Debug|x64.Build.0 = Debug|Any CPU
+		{EEA8CC4D-2596-4EBA-864C-1D111A39D14F}.Release|x64.ActiveCfg = Release|Any CPU
+		{EEA8CC4D-2596-4EBA-864C-1D111A39D14F}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9BD81D06-2CD1-4021-9814-1CFCA9ECC2D7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C7EEF96A-F918-49FF-B2CC-0DADED2DF56A} = {229D5200-5D8F-4F4A-AE7D-AC50CCB0FE82}
+		{D8E4CE3D-FC0D-4B25-A68F-3A05F2E181C1} = {229D5200-5D8F-4F4A-AE7D-AC50CCB0FE82}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B67AAB8-6A6D-4B5B-892A-BFA7F3DB89FD}
+	EndGlobalSection
+EndGlobal

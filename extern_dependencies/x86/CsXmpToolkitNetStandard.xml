@@ -1,0 +1,2004 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CsXmpToolkitNetStandard</name>
+    </assembly>
+    <members>
+        <member name="T:SE.Halligang.CsXmpToolkit.FileFormatInfo">
+            <summary>
+            A helper class that substitutes XmpFiles.GetFormatInfo.
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.FileFormatInfo.#ctor(SE.Halligang.CsXmpToolkit.FileFormat)">
+            <summary>
+            Retrieves file format information for the given file format.
+            </summary>
+            <param name="fileFormat">File format to get information for.</param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.FileFormatInfo.FileFormat">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.FileFormatInfo.FormatInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.FileFormatInfo.ScanningMode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.ScanningMode">
+            <summary>
+            The scanning mode used by XmpFiles.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ScanningMode.Smart">
+            <summary>
+            Use smart scanning.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ScanningMode.Packet">
+            <summary>
+            Use packet scanning.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.PacketInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.PacketInfo.Offset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.PacketInfo.Length">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.PacketInfo.PadSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.PacketInfo.CharForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.PacketInfo.Writeable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.PInvoke.TextOutputDelegate">
+            <summary>
+            
+            </summary>
+            <param name="refCon">User supplied state object.</param>
+            <param name="buffer">Buffer containing UTF-8 encoded char array.</param>
+            <param name="bufferSize">Size of buffer.</param>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.ThumbnailInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.ThumbnailInfo.FileFormat">
+            <summary>
+            The format of the containing file.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.ThumbnailInfo.FullWidth">
+            <summary>
+            Full image width in pixels.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.ThumbnailInfo.FullHeight">
+            <summary>
+            Full image height in pixels.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.ThumbnailInfo.ThumbnailWidth">
+            <summary>
+            Thumbnail image width in pixels.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.ThumbnailInfo.ThumbnailHeight">
+            <summary>
+            Thumbnail image height in pixels.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.ThumbnailInfo.FullOrientation">
+            <summary>
+            Orientation of full image, as defined by Exif for tag 274.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.ThumbnailInfo.ThumbnailOrientation">
+            <summary>
+            Orientation of thumbnail, as defined by Exif for tag 274.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.ThumbnailInfo.ThumbnailImage">
+            <summary>
+            Raw data from the host file, valid for life of the owning XMPFiles object. Do not modify!
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.ThumbnailInfo.ThumbnailSize">
+            <summary>
+            The size in bytes of the tnailImage data.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.ThumbnailInfo.ThumbnailFormat">
+            <summary>
+            The format of the tnailImage data.
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.ThumbnailInfo.GetThumbnail">
+            <summary>
+            Gets the thumbnails as a bitmap bytes
+            </summary>
+            <returns>The thumbnail from the file, or empty array if it could not be read/parsed.</returns>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.XmpException.ErrorCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.XmpVersionInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.XmpVersionInfo.Major">
+            <summary>
+            The primary release number, the "1" in version "1.2.3".
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.XmpVersionInfo.Minor">
+            <summary>
+            The secondary release number, the "2" in version "1.2.3".
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.XmpVersionInfo.Micro">
+            <summary>
+            The tertiary release number, the "3" in version "1.2.3".
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.XmpVersionInfo.IsDebug">
+            <summary>
+            Really a 0/1 bool value. True if this is a debug build.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.XmpVersionInfo.Build">
+            <summary>
+            A rolling build number, monotonically increasing in a release.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.XmpVersionInfo.Flags">
+            <summary>
+            Individual feature implementation flags.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.XmpVersionInfo.Message">
+            <summary>
+            A comprehensive version information string.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.AbortDelegate">
+            <summary>
+            Callback that is called by Xmp Toolkit to get whether to abort or not.
+            </summary>
+            <param name="arg">User supplied state object.</param>
+            <returns>Return true to abort or false to continue.</returns>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.TextOutputDelegate">
+            <summary>
+            Callback that receives strings as they are sent from the Xmp Toolkit.
+            </summary>
+            <param name="state">User supplied state object.</param>
+            <param name="textOutput">Text from Xmp Toolkit</param>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.AppendMode.DoAllProperties">
+            <summary>
+            Do all properties, default is just external properties.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.AppendMode.ReplaceOldValues">
+            <summary>
+            Replace existing values, default is to leave them.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.AppendMode.DeleteEmptyValues">
+            <summary>
+            Delete properties if the new value is empty.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ArrayItemFlags.None">
+            <summary>
+            None specified.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ArrayItemFlags.ValueIsArray">
+            <summary>
+            The value is an array (RDF alt/bag/seq).
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ArrayItemFlags.ArrayIsUnordered">
+            <summary>
+            The item order does not matter.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ArrayItemFlags.ArrayIsOrdered">
+            <summary>
+            Implies ValueIsArray, item order matters.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ArrayItemFlags.ArrayIsAlternate">
+            <summary>
+            Implies ArrayIsOrdered, items are alternates.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ArrayItemFlags.ArrayIsAltText">
+            <summary>
+            Implies ArrayIsAlternate, items are localized text.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ArrayItemFlags.AllowCommas">
+            <summary>
+            Allow commas in item values, default is separator.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.CloseFlags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.CloseFlags.None">
+            <summary>
+            None specified.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.CloseFlags.UpdateSafely">
+            <summary>
+            Write into a temporary file and swap for crash safety.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.PostScript">
+            <summary>
+            PS, general PostScript following DSC conventions.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Eps">
+            <summary>
+            Encapsulated PostScript.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Jpeg2k">
+            <summary>
+            JPX, ISO 15444-1
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Mov">
+            <summary>
+            Quicktime
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Cin">
+            <summary>
+            Cineon
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Ses">
+            <summary>
+            Audition session
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Cel">
+            <summary>
+            Audition loop
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Mpeg2">
+            <summary>
+            MP2
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Mpeg4">
+            <summary>
+            MP4, ISO 14494-12 and -14
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Wmav">
+            <summary>
+            Windows Media Audio and Video
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Xmp">
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Photoshop">
+            <summary>
+            PSD
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.Illustrator">
+            <summary>
+            AI
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.InDesign">
+            <summary>
+            INDD
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.AEProject">
+            <summary>
+            AEP
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.AEProjTemplate">
+            <summary>
+            AET, After Effects Project Template
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.AEFilterPreset">
+            <summary>
+            FFX
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.EncoreProject">
+            <summary>
+            NCOR
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.PremiereProject">
+            <summary>
+            PRPJ
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FileFormat.PremiereTitle">
+            <summary>
+            PRTL
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.CanInjectXMP">
+            <summary>
+            Can inject first-time XMP into an existing file.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.CanExpand">
+            <summary>
+            Can expand XMP or other metadata in an existing file.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.CanRewrite">
+            <summary>
+            Can copy one file to another, writing new metadata.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.PrefersInPlace">
+            <summary>
+            Can expand, but prefers in-place update.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.CanReconcile">
+            <summary>
+            Supports reconciliation between XMP and other forms.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.AllowsOnlyXMP">
+            <summary>
+            Allows access to just the XMP, ignoring other forms.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.ReturnsRawPacket">
+            <summary>
+            File handler returns raw XMP packet information.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.ReturnsTNail">
+            <summary>
+            File handler returns native thumbnail.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.HandlerOwnsFile">
+            <summary>
+            The file handler does the file open and close.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.AllowsSafeUpdate">
+            <summary>
+            The file handler allows crash-safe file updates.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.NeedsReadOnlyPacket">
+            <summary>
+            The file format needs the XMP packet to be read-only.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.FormatInfo.UsesSidecarXMP">
+            <summary>
+            The file handler uses a "sidecar" file for the XMP.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.IteratorMode.IncludeAll">
+            <summary>
+            Iterate everything.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.IteratorMode.JustChildren">
+            <summary>
+            Just do the immediate children of the root, default is subtree.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.IteratorMode.JustLeafNodes">
+            <summary>
+            Just do the leaf nodes, default is all nodes in the subtree.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.IteratorMode.JustLeafName">
+            <summary>
+            Return just the leaf part of the path, default is the full path.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.IteratorMode.OmitQualifiers">
+            <summary>
+            Omit all qualifiers.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.IteratorSkipMode.SkipSubtree">
+            <summary>
+            Skip the subtree below the current node.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.IteratorSkipMode.SkipSiblings">
+            <summary>
+            Skip the subtree below and remaining siblings of the current node.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.OpenFlags.None">
+            <summary>
+            None specified.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.OpenFlags.OpenForRead">
+            <summary>
+            Open for read-only access.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.OpenFlags.OpenForUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ParseFlags.RequireXmpMeta">
+            <summary>
+            Require a surrounding x:xmpmeta element.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ParseFlags.ParseMoreBuffers">
+            <summary>
+            This is the not last input buffer for this parse stream.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ParseFlags.StrictAliasing">
+            <summary>
+            Do not reconcile alias differences, throw an exception.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.None">
+            <summary>
+            None specified.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.ValueIsUri">
+            <summary>
+            The value is a URI, use rdf:resource attribute. DISCOURAGED
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.HasQualifiers">
+            <summary>
+            The property has qualifiers, includes rdf:type and xml:lang.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.IsQualifier">
+            <summary>
+            This is a qualifier, includes rdf:type and xml:lang.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.HasLang">
+            <summary>
+            Implies kXMP_PropHasQualifiers, property has xml:lang.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.HasType">
+            <summary>
+            Implies kXMP_PropHasQualifiers, property has rdf:type.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.ValueIsStruct">
+            <summary>
+            The value is a structure with nested fields.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.ValueIsArray">
+            <summary>
+            The value is an array (RDF alt/bag/seq).
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.ArrayIsUnordered">
+            <summary>
+            The item order does not matter.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.ArrayIsOrdered">
+            <summary>
+            Implies ValueIsArray, item order matters.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.ArrayIsAlternate">
+            <summary>
+            Implies ArrayIsOrdered, items are alternates.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.ArrayIsAltText">
+            <summary>
+            Implies ArrayIsAlternate, items are localized text.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.IsAlias">
+            <summary>
+            This property is an alias name for another property.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.HasAliases">
+            <summary>
+            This property is the base value for a set of aliases.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.IsInternal">
+            <summary>
+            This property is an "internal" property, owned by applications.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.IsStable">
+            <summary>
+            This property is not derived from the document content.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.IsDerived">
+            <summary>
+            This property is derived from the document content.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.ArrayForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.Composite">
+            <summary>
+            Is it simple or composite (array or struct)?
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.SchemaNode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.DeleteExisting">
+            <summary>
+            NOTE: Valid for Set... functions. Delete any pre-existing property.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.InsertBeforeItem">
+            <summary>
+            NOTE: Valid for SetArrayItem. Insert a new item before the given index.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.PropertyFlags.InsertAfterItem">
+            <summary>
+            NOTE: Valid for SetArrayItem. Insert a new item after the given index.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.RemoveMode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.RemoveMode.None">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.RemoveMode.DoAllProperties">
+            <summary>
+            Do all properties, default is just external properties.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.RemoveMode.IncludeAliases">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.SerializeFlags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.OmitPacketWrapper">
+            <summary>
+            Omit the XML packet wrapper.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.ReadOnlyPacket">
+            <summary>
+            Defat is a writeable packet.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.UseCompactFormat">
+            <summary>
+            Use a compact form of RDF.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.IncludeThumbnailPad">
+            <summary>
+            Include a padding allowance for a thumbnail image.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.ExactPacketLength">
+            <summary>
+            The padding parameter is the overall packet length.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.WriteAliasComments">
+            <summary>
+            Show aliases as XML comments.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.OmitAllFormatting">
+            <summary>
+            Omit all formatting whitespace.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.LittleEndian">
+            <summary>
+            ! Don't use directly, see the combined values below!
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.UTF16">
+            <summary>
+            ! Don't use directly, see the combined values below!
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.UTF32">
+            <summary>
+            ! Don't use directly, see the combined values below!
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.EncodingMask">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.EncodeUTF8">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.EncodeUTF16Big">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.EncodeUTF16Little">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.EncodeUTF32Big">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.SerializeFlags.EncodeUTF32Little">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.ThumbnailFormat">
+            <summary>
+            Specifies the format of the embedded thumbnail.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ThumbnailFormat.Unknown">
+            <summary>
+            The thumbnail data has an unknown format.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ThumbnailFormat.Jpeg">
+            <summary>
+            The thumbnail data is a JPEG stream, presumably compressed.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ThumbnailFormat.Tiff">
+            <summary>
+            The thumbnail data is a TIFF stream, presumably uncompressed.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.ThumbnailFormat.Photoshop">
+            <summary>
+            The thumbnail data is in the format of Photoshop Image Resource 1036.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.XmpErrorCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpArray`1.PropertyPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.XmpArray">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.Schemas.XmpArrayCallbackType.Created">
+            <summary>
+            List is created.
+            TODO: Read list items from XMP.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.Schemas.XmpArrayCallbackType.Insert">
+            <summary>
+            PRE: Item is about to be inserted.
+            TODO: Update the index of all items following itemIndex.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.Schemas.XmpArrayCallbackType.Set">
+            <summary>
+            PRE: Item is about to be overwritten (followed by Add).
+            TODO: Update the member status of the item being overwritten.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.Schemas.XmpArrayCallbackType.Clear">
+            <summary>
+            PRE: List is about to be cleared.
+            TODO: Update the member status of all items.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.Schemas.XmpArrayCallbackType.Added">
+            <summary>
+            POST: Item was added.
+            TODO: Update the member status of the itemValue.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.Schemas.XmpArrayCallbackType.Removed">
+            <summary>
+            POST: Item was removed.
+            TODO: Update the member status of the itemValue.
+                  Update the index of all items following itemIndex.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.XmpLangAlt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.XmpLangAlt.#ctor(SE.Halligang.CsXmpToolkit.XmpCore,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="xmpCore"></param>
+            <param name="schemaNamespace"></param>
+            <param name="propertyPath"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpLangAlt.PropertyPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpLangAlt.DefaultValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.CommonFields.DublinCore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.CommonFields.Photoshop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.CommonFields.XmpRights">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.DublinCore">
+            <summary>
+            Dublic Core Schema
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.#ctor(SE.Halligang.CsXmpToolkit.Schemas.Xmp)">
+            <summary>
+            Constructs a DublinCore object.
+            </summary>
+            <param name="xmp"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Namespace">
+            <summary>
+            Gets the namespace URI for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Contributor">
+            <summary>
+            Contributors to the resource (other than the authors).
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Coverage">
+            <summary>
+            The extent or scope of the resource.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Creator">
+            <summary>
+            The authors of the resource (listed in order of precedence, if significant).
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Date">
+            <summary>
+            Date(s) that something interesting happened to the resource.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Description">
+            <summary>
+            A textual description of the content of the resource. Multiple values may be present for different languages.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Format">
+            <summary>
+            The file format used when saving the resource. Tools and applications should set 
+            this property to the save format of the data. It may include appropriate qualifiers.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Identifier">
+            <summary>
+            Unique identifier of the resource.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Language">
+            <summary>
+            An unordered array specifying the languages used in the resource.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Publisher">
+            <summary>
+            Publishers.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Relation">
+            <summary>
+            Relationships to other documents.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Rights">
+            <summary>
+            Informal rights statement, selected by language.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Source">
+            <summary>
+            Unique identifier of the work from which this resource was derived.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Subject">
+            <summary>
+            An unordered array of descriptive phrases or keywords that specify the topic of the content of the resource.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Title">
+            <summary>
+            The title of the document, or the name given to the resource. 
+            Typically, it will be a name by which the resource is formally known.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.DublinCore.Type">
+            <summary>
+            A document type; for example, novel, poem, or working paper.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.ExifAdditional">
+            <summary>
+            EXIF Schema for Additional EXIF Properties
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.ExifAdditional.#ctor(SE.Halligang.CsXmpToolkit.Schemas.Xmp)">
+            <summary>
+            Constructs an ExifAdditional object.
+            </summary>
+            <param name="xmp"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ExifAdditional.Namespace">
+            <summary>
+            Gets the namespace URI for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ExifAdditional.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ExifAdditional.Lens">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ExifAdditional.SerialNumber">
+            <summary>
+            The extent or scope of the resource.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.ExifSpecific">
+            <summary>
+            EXIF Schema for EXIF-specific Properties
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.ExifTiff">
+            <summary>
+            EXIF Schema for TIFF Properties
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.ImageMap">
+            <summary>
+            Image Map Schema
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.ImageMap.#ctor(SE.Halligang.CsXmpToolkit.Schemas.Xmp)">
+            <summary>
+            Constructs an ImageMap object.
+            </summary>
+            <param name="xmp"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ImageMap.Namespace">
+            <summary>
+            Gets the namespace URI for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ImageMap.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ImageMap.ImageSize">
+            <summary>
+            The size of the image that this map refers to.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ImageMap.Areas">
+            <summary>
+            An ordered array of areas.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.Iptc">
+            <summary>
+            IPTC Core Schema
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.Iptc.#ctor(SE.Halligang.CsXmpToolkit.Schemas.Xmp)">
+            <summary>
+            Constructs a DublinCore object.
+            </summary>
+            <param name="xmp"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Namespace">
+            <summary>
+            Gets the namespace URI for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.City">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.CopyrightNotice">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Country">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.CountryCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Creator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.CreatorContactInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.CreatorJobtitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.DescriptionWriter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Headline">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Instructions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.IntellectualGenre">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.JobID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Keywords">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Location">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Provider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.ProvinceOrState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.RightsUsageTerms">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Scene">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Source">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.SubjectCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Iptc.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.Pdf">
+            <summary>
+            Adobe PDF Schema
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.Pdf.#ctor(SE.Halligang.CsXmpToolkit.Schemas.Xmp)">
+            <summary>
+            Constructs a Pdf object.
+            </summary>
+            <param name="xmp"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Pdf.Namespace">
+            <summary>
+            Gets the namespace URI for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Pdf.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Pdf.Keywords">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Pdf.PdfVersion">
+            <summary>
+            The extent or scope of the resource.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Pdf.Producer">
+            <summary>
+            The extent or scope of the resource.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.PersonalClassification">
+            <summary>
+            Personal Classification Schema
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.PersonalClassification.#ctor(SE.Halligang.CsXmpToolkit.Schemas.Xmp)">
+            <summary>
+            Constructs a PersonalClassification object.
+            </summary>
+            <param name="xmp"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.PersonalClassification.Namespace">
+            <summary>
+            Gets the namespace URI for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.PersonalClassification.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.PersonalClassification.Creator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.PersonalClassification.Classifications">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.Photoshop">
+            <summary>
+            Photoshop Schema
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.#ctor(SE.Halligang.CsXmpToolkit.Schemas.Xmp)">
+            <summary>
+            Constructs a Photoshop object.
+            </summary>
+            <param name="xmp"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.Namespace">
+            <summary>
+            Gets the namespace URI for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.AuthorsPosition">
+            <summary>
+            By-line title.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.CaptionWriter">
+            <summary>
+            Writer/editor.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.Category">
+            <summary>
+            Category. Limited to 3 7-bit ASCII characters.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.City">
+            <summary>
+            City.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.Country">
+            <summary>
+            Country/primary location.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.Credit">
+            <summary>
+            Credit.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.DateCreated">
+            <summary>
+            The date the intellectual content of the document
+            was created (rather than the creation date of the
+            physical representation), following IIM conventions.
+            For example, a photo taken during the American
+            Civil War would have a creation date during that
+            epoch (1861-1865) rather than the date the photo
+            was digitized for archiving.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.Headline">
+            <summary>
+            Headline.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.Instructions">
+            <summary>
+            Special instructions.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.Source">
+            <summary>
+            Source.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.State">
+            <summary>
+            Province/state.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.SupplementalCategories">
+            <summary>
+            Supplemental category.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.TransmissionReference">
+            <summary>
+            Original transmission reference.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Photoshop.Urgency">
+            <summary>
+            Urgency. Valid range is 1-8.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.Raw">
+            <summary>
+            Camera Raw Schema
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic">
+            <summary>
+            XMP Basic Schema
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.#ctor(SE.Halligang.CsXmpToolkit.Schemas.Xmp)">
+            <summary>
+            Constructs an XmpBasic object.
+            </summary>
+            <param name="xmp"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.Namespace">
+            <summary>
+            Gets the namespace URI for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.PreferredPrefix">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.Advisory">
+            <summary>
+            An unordered array specifying properties that were
+            edited outside the authoring application.
+            Each item should contain a single namespace and XPath
+            separated by one ASCII space (U+0020).
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.BaseUrl">
+            <summary>
+            The base URL for relative URLs in the document
+            content. If this document contains Internet links, and
+            those links are relative, they are relative to this base
+            URL.
+            This property provides a standard way for embedded
+            relative URLs to be interpreted by tools. Web authoring
+            tools should set the value based on their notion of where
+            URLs will be interpreted.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.CreateDate">
+            <summary>
+            The date and time the resource was originally created.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.CreatorTool">
+            <summary>
+            The name of the first known tool used to create the
+            resource. If history is present in the metadata, this value
+            should be equivalent to that of xmpMM:History's
+            softwareAgent property.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.Identifier">
+            <summary>
+            An unordered array of text strings that unambiguously
+            identify the resource within a given context. An array
+            item may be qualified with xmpidq:Scheme to denote
+            the formal identification system to which that identifier
+            conforms.
+            NOTE: The dc:identifier property is not used because it
+                  lacks a defined scheme qualifier and has been
+                  defined in the XMP Specification as a simple
+                  (single-valued) property.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.Label">
+            <summary>
+            A word or short phrase that identifies a document as a
+            member of a user-defined collection. Used to organize
+            documents in a file browser.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.MetadataDate">
+            <summary>
+            The date and time that any metadata for this resource
+            was last changed. It should be the same as or more
+            recent than xmp:ModifyDate.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.ModifyDate">
+            <summary>
+            The date and time the resource was last modified.
+            NOTE: The value of this property is not necessarily the
+                  same as the file’s system modification date
+                  because it is set before the file is saved.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.Nickname">
+            <summary>
+            A short informal name for the resource.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.Rating">
+            <summary>
+            A number that indicates a document’s status relative to
+            other documents, used to organize documents in a file
+            browser. Values are user-defined within an applicationdefined
+            range.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.Thumbnails">
+            <summary>
+            An alternative array of thumbnail images for a file, which can differ in characteristics such as size or image encoding.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.QualifiedIdentifier.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpBasic.QualifiedIdentifier.Scheme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.XmpDynamic">
+            <summary>
+            XMP Dynamic Media Schema
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.XmpJob">
+            <summary>
+            XMP Basic Job Ticket Schema
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.XmpJob.#ctor(SE.Halligang.CsXmpToolkit.Schemas.Xmp)">
+            <summary>
+            Constructs an ImageMap object.
+            </summary>
+            <param name="xmp"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpJob.Namespace">
+            <summary>
+            Gets the namespace URI for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpJob.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpJob.JobRef">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.XmpMedia">
+            <summary>
+            XMP Media Management Schema
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.XmpRights">
+            <summary>
+            XMP Rights Management Schema
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.XmpRights.#ctor(SE.Halligang.CsXmpToolkit.Schemas.Xmp)">
+            <summary>
+            Constructs an XmpRights object.
+            </summary>
+            <param name="xmp"></param>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpRights.Namespace">
+            <summary>
+            Gets the namespace URI for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpRights.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the schema.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpRights.Certificate">
+            <summary>
+            Online rights management certificate.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpRights.Marked">
+            <summary>
+            Indicates that this is a rights-managed resource.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpRights.Owner">
+            <summary>
+            An unordered array specifying the legal owner(s)
+            of a resource.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpRights.UsageTerms">
+            <summary>
+            Text instructions on how a resource can be
+            legally used.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.XmpRights.WebStatement">
+            <summary>
+            The location of a web page describing the owner
+            and/or rights statement for this resource.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.XmpText">
+            <summary>
+            XMP Paged-Text Schema
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Area.Namespace">
+            <summary>
+            Gets the namespace URI for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Area.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Area.ImageMap">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Area.Type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Area.Cords">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Area.Title">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Area.Description">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Area.Target">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Classification.Namespace">
+            <summary>
+            Gets the namespace URI for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Classification.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Classification.Subject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Classification.Type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Classification.Path">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ContactInfo.Namespace">
+            <summary>
+            Gets the namespace URI for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ContactInfo.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ContactInfo.City">
+            <summary>
+            The contact information city part.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ContactInfo.Country">
+            <summary>
+            The contact information county part.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ContactInfo.Address">
+            <summary>
+            The contact information address part. Comprises an optional company name and all
+            required information to locate the building or postbox to which mail should be sent. To that
+            end, the address is a multiline field.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ContactInfo.PostalCode">
+            <summary>
+            The contact information part denoting the local postal code.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ContactInfo.StateOrProvince">
+            <summary>
+            The contact information part denoting regional information like state or province.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ContactInfo.EMail">
+            <summary>
+            The contact information email address part. Multiple email addresses can be given,
+            separated by a comma.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ContactInfo.Phone">
+            <summary>
+            The contact information phone number part. Multiple numbers can be given, separated by
+            a comma.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.ContactInfo.WebUrl">
+            <summary>
+            The contact information web address part. Multiple addresses can be given, separated by
+            a comma.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.Dimensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Dimensions.Namespace">
+            <summary>
+            Gets the namespace URI for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Dimensions.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Dimensions.Width">
+            <summary>
+            Width
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Dimensions.Height">
+            <summary>
+            Height
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Dimensions.Unit">
+            <summary>
+            Units. For example: inch, mm, pixel, pica, point
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Job.Namespace">
+            <summary>
+            Gets the namespace URI for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Job.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Job.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Job.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Job.Url">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.LangEntry.Language">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.LangEntry.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.Schemas.Thumbnail">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Thumbnail.Namespace">
+            <summary>
+            Gets the namespace URI for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Thumbnail.PreferredPrefix">
+            <summary>
+            Gets the preferred prefix for the struct.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Thumbnail.Width">
+            <summary>
+            Width in pixels
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Thumbnail.Height">
+            <summary>
+            Height in pixels
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Thumbnail.Format">
+            <summary>
+            The image encoding. Defined value: JPEG.
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Thumbnail.Image">
+            <summary>
+            The thumbnail image (pixel data only) converted to base 64
+            notation (according to section 6.8 of RFC 2045).
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Xmp.XmpCore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.Schemas.Xmp.CommonFields">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.Xmp.FromFile(System.String,SE.Halligang.CsXmpToolkit.Schemas.XmpFileMode)">
+            <summary>
+            
+            </summary>
+            <param name="filePath"></param>
+            <param name="fileMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.Schemas.Xmp.Save">
+            <summary>
+            Saves the XMP to file.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.Schemas.XmpFileMode.ReadOnly">
+            <summary>
+            Reads XMP from file. Note: XMP will not be written back to file, even if changed.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.Schemas.XmpFileMode.ReadWrite">
+            <summary>
+            Reads XMP from file, and saves when disposing object.
+            </summary>
+        </member>
+        <member name="F:SE.Halligang.CsXmpToolkit.Schemas.XmpFileMode.WriteOnly">
+            <summary>
+            Creates new XMP. Note: If there already exists XMP in the file it will be overwritten.
+            </summary>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.XmpCore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SE.Halligang.CsXmpToolkit.XmpCore.Handle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpCore.SetProperty(System.String,System.String,System.String,SE.Halligang.CsXmpToolkit.PropertyFlags)">
+            <summary>
+            
+            </summary>
+            <param name="schemaNS"></param>
+            <param name="propName"></param>
+            <param name="propValue"></param>
+            <param name="options"></param>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.XmpFiles">
+            <summary>
+            API for access to the "main" metadata in a file.
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.#ctor">
+            <summary>
+            The default constructor initializes an object that is associated with no file.
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.#ctor(System.String,SE.Halligang.CsXmpToolkit.FileFormat,SE.Halligang.CsXmpToolkit.OpenFlags)">
+            <summary>
+            This alternate constructor call OpenFile.
+            </summary>
+            <param name="filePath">The path for the file.</param>
+            <param name="fileFormat">The format of the file.</param>
+            <param name="openFlags">A set of option bits describing the desired access.</param>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.Dispose">
+            <summary>
+            Disposes all resources allocated by this object.
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.OpenFile(System.String,SE.Halligang.CsXmpToolkit.FileFormat,SE.Halligang.CsXmpToolkit.OpenFlags)">
+            <summary>
+            Open a file for metadata access.
+            </summary>
+            <param name="filePath">The path for the file.</param>
+            <param name="fileFormat">The format of the file.</param>
+            <param name="openFlags">A set of option bits describing the desired access.</param>
+            <returns>
+            Returns true if the file is succesfully opened and attached to a file handler.
+            </returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.CloseFile(SE.Halligang.CsXmpToolkit.CloseFlags)">
+            <summary>
+            Close an opened file.
+            </summary>
+            <param name="closeFlags">A set of bit flags for optional closing actions.</param>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.GetFileInfo(SE.Halligang.CsXmpToolkit.OpenFlags@,SE.Halligang.CsXmpToolkit.FileFormat@,SE.Halligang.CsXmpToolkit.FormatInfo@)">
+            <summary>
+            Get basic information about an opened file. 
+            </summary>
+            <param name="openFlags">Returns the flags passed to OpenFile.</param>
+            <param name="fileFormat">Returns the format of the file.</param>
+            <param name="handlerFlags">Returns the handler's capability flags.</param>
+            <returns>
+            Returns true if a file is opened, false otherwise.
+            </returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.SetAbortProc(SE.Halligang.CsXmpToolkit.AbortDelegate,System.IntPtr)">
+            <summary>
+            Set the callback function used to check for a user signaled abort.
+            </summary>
+            <param name="abortProc">The callback function used to check for a user signaled abort.</param>
+            <param name="abortArg">An argument passed to the callback function.</param>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.GetXmp">
+            <summary>
+            Obtain the XMP.
+            </summary>
+            <returns>Returns true if the file has XMP, false otherwise. </returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.GetXmp(SE.Halligang.CsXmpToolkit.XmpCore)">
+            <summary>
+            Obtain the XMP.
+            </summary>
+            <param name="xmpCore">Returns the parsed XMP.</param>
+            <returns>Returns true if the file has XMP, false otherwise. </returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.GetXmp(SE.Halligang.CsXmpToolkit.XmpCore,SE.Halligang.CsXmpToolkit.PacketInfo)">
+            <summary>
+            Obtain the XMP.
+            </summary>
+            <param name="xmpCore">Returns the parsed XMP.</param>
+            <param name="packetInfo">Returns the location and form of the raw XMP in the file.</param>
+            <returns>Returns true if the file has XMP, false otherwise. </returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.GetXmp(SE.Halligang.CsXmpToolkit.XmpCore,SE.Halligang.CsXmpToolkit.PacketInfo,System.String@)">
+            <summary>
+            Obtain the XMP.
+            </summary>
+            <param name="xmpCore">Returns the parsed XMP.</param>
+            <param name="packetInfo">Returns the location and form of the raw XMP in the file.</param>
+            <param name="xmpPacket">Returns the raw XMP packet as stored in the file.</param>
+            <returns>Returns true if the file has XMP, false otherwise. </returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.GetThumbnail(SE.Halligang.CsXmpToolkit.ThumbnailInfo@)">
+            <summary>
+            Obtain the native thumbnail.
+            </summary>
+            <param name="thumbnailInfo">Returns information about a recognized native thumbnail, and some related information about the primary image if appropriate.</param>
+            <returns>Returns true if a recognized native thumbnail is present and the thumbnail was cached by OpenFile.</returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.PutXmp(SE.Halligang.CsXmpToolkit.XmpCore)">
+            <summary>
+            Update the XMP.
+            </summary>
+            <param name="xmpCore">Parsed XMP.</param>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.CanPutXmp(SE.Halligang.CsXmpToolkit.XmpCore)">
+            <summary>
+            Determine if the XMP can be updated. 
+            </summary>
+            <param name="xmpCore">Parsed XMP.</param>
+            <returns>True if the XMP can be updated, false otherwise.</returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.GetVersionInfo">
+            <summary>
+            Gets the version information for the XMP Toolkit.
+            </summary>
+            <returns>The version information for the XMP Toolkit.</returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.Initialize">
+            <summary>
+            Initialize must be called before using XmpFiles.
+            </summary>
+            <returns>True if initialized, false otherwise.</returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.Initialize(System.Int32)">
+            <summary>
+            Initialize must be called before using XmpFiles.
+            </summary>
+            <param name="options"></param>
+            <returns>True if initialized, false otherwise.</returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.Terminate">
+            <summary>
+            Terminate may be called when done using XmpFiles. It deallocates global data structures created by Initialize. 
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpFiles.GetFormatInfo(SE.Halligang.CsXmpToolkit.FileFormat,SE.Halligang.CsXmpToolkit.FormatInfo@)">
+            <summary>
+            Determine the supported features for a given file format.
+            </summary>
+            <param name="fileFormat">File format.</param>
+            <param name="handlerFlags">Returns the handler flags for the file format.</param>
+            <returns>True if format info was retrieved, false otherwise.</returns>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.XmpIterator">
+            <summary>
+            XMP Toolkit iteration services.
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpIterator.#ctor(SE.Halligang.CsXmpToolkit.XmpCore,System.String,System.String,SE.Halligang.CsXmpToolkit.IteratorMode)">
+            <summary>
+            Construct an iterator for the properties within an XMP object.
+            </summary>
+            <param name="xmpCore">The XMP object over which to iterate.</param>
+            <param name="schemaNS">Optional schema namespace URI to restrict the iteration. Omitted (visit all schema) by passing null or "".</param>
+            <param name="propName">Optional property name to restrict the iteration. May be an arbitrary path expression. Omitted (visit all properties) by passing 0 or "".</param>
+            <param name="options">Option flags to control the iteration.</param>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpIterator.Dispose">
+            <summary>
+            Disposes all resources allocated by this object.
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpIterator.Next(System.String@,System.String@,System.String@,SE.Halligang.CsXmpToolkit.PropertyFlags@)">
+            <summary>
+            Visit the next node in the iteration.
+            </summary>
+            <param name="schemaNS">The schema namespace URI of the current property.</param>
+            <param name="propPath">The XPath name of the current property.</param>
+            <param name="propValue">The value of the current property.</param>
+            <param name="options">The flags describing the current property.</param>
+            <returns>Returns true if there was another node to visit, false if the iteration is done.</returns>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpIterator.Skip(SE.Halligang.CsXmpToolkit.IteratorSkipMode)">
+            <summary>
+            Skip some portion of the remaining iterations.
+            </summary>
+            <param name="options">Option flags to control the iteration.</param>
+        </member>
+        <member name="T:SE.Halligang.CsXmpToolkit.XmpUtils">
+            <summary>
+            XMP Toolkit utility services.
+            </summary>
+        </member>
+        <member name="M:SE.Halligang.CsXmpToolkit.XmpUtils.ComposeStructFieldPath(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="schemaNS"></param>
+            <param name="structName"></param>
+            <param name="fieldNS"></param>
+            <param name="fieldName"></param>
+            <param name="fullPath"></param>
+        </member>
+        <member name="M:System.Runtime.InteropServices.MarshalHelper.GetString(System.IntPtr,System.Int32,System.Int32,System.Text.Encoding)">
+            <summary>
+            Reads and returns a null-terminated-string from the pointer.
+            </summary>
+            <param name="ptr">Pointer to extract string from.</param>
+            <param name="index">Index to start reading from.</param>
+            <param name="maxBytes">Maximum number of bytes to read.</param>
+            <param name="encoding">Encoding to use.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Runtime.InteropServices.MarshalHelper.GetString(System.IntPtr,System.Int32,System.Int32,System.Int32@,System.Text.Encoding)">
+            <summary>
+            Reads and returns a null-terminated-string from the pointer.
+            </summary>
+            <param name="ptr">Pointer to extract string from.</param>
+            <param name="index">Index to start reading from.</param>
+            <param name="maxBytes">Maximum number of bytes to read.</param>
+            <param name="bytesRead">The actual number of bytes read.</param>
+            <param name="encoding">Encoding to use.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
