@@ -1,4 +1,5 @@
-![Status](https://github.com/xeniorn/SimpleXmpLib/actions/workflows/dotnet.yml/badge.svg?branch=develop)
+![Status-Dev](https://github.com/xeniorn/SimpleXmpLib/actions/workflows/dotnet.yml/badge.svg?branch=develop)
+![Status-Main](https://github.com/xeniorn/SimpleXmpLib/actions/workflows/dotnet.yml/badge.svg?branch=main)
 ![NuGet Version](https://img.shields.io/nuget/v/SimpleXmpLib)
 
 SimpleXmpLib provides a convenient way to work with XMP metadata containers, and embedding such containers in supported files.
