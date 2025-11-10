@@ -37,6 +37,14 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 15
     steps:
+
+    # Get a short-lived NuGet API key
+    - name: NuGet login (OIDC → temp API key)
+      uses: NuGet/login@v1
+      id: login
+      with:
+        user: ${{ secrets.NUGET_USER }}
+    
     - name: Checkout
       uses: actions/checkout@v4
     - name: Setup .NET
@@ -65,14 +73,14 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration ${{ env.TARGET_CONFIGURATION }} /p:Platform=${{ env.TARGET_PLATFORM }} /p:PackageVersion=${{ env.VERSION }} --output ${{ env.NUGET_OUTPUT_FOLDER }} --force ${{ env.PACK_PROJECT_PATH }} 
     - name: Push
-      run: dotnet nuget push ${{ env.NUGET_OUTPUT_FOLDER }}/${{ env.PROJECT_NAME }}.${{ env.VERSION }}.nupkg --source ${{ env.NUGET_ENDPOINT_URL }} --api-key ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push ${{ env.NUGET_OUTPUT_FOLDER }}/${{ env.PROJECT_NAME }}.${{ env.VERSION }}.nupkg --source ${{ env.NUGET_ENDPOINT_URL }} --api-key ${{ steps.login.outputs.NUGET_API_KEY }}
       env:
         NUGET_ENDPOINT_URL: https://api.nuget.org/v3/index.json
-        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}        
+        NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
     - name: Pack2
       run: dotnet pack --configuration ${{ env.TARGET_CONFIGURATION }} /p:Platform=${{ env.TARGET_PLATFORM }} /p:PackageVersion=${{ env.VERSION }} --output ${{ env.NUGET_OUTPUT_FOLDER_2 }} --force ${{ env.PACK_PROJECT_PATH_2 }} 
     - name: Push2
-      run: dotnet nuget push ${{ env.NUGET_OUTPUT_FOLDER_2 }}/${{ env.PROJECT_NAME_2 }}.${{ env.VERSION }}.nupkg --source ${{ env.NUGET_ENDPOINT_URL }} --api-key ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push ${{ env.NUGET_OUTPUT_FOLDER_2 }}/${{ env.PROJECT_NAME_2 }}.${{ env.VERSION }}.nupkg --source ${{ env.NUGET_ENDPOINT_URL }} --api-key ${{ steps.login.outputs.NUGET_API_KEY }}
       env:
         NUGET_ENDPOINT_URL: https://api.nuget.org/v3/index.json
-        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
